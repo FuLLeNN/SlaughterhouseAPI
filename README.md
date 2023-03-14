@@ -16,7 +16,7 @@
 📂com 
     📂 example 
         📂 slaughterhouse 
-            - SlaughterhouseApplication.java 
+            📃 SlaughterhouseApplication.java 
             📁 Controllers
             📁 Core
             📁 DTOs
