@@ -13,10 +13,10 @@
 
 ## Folder Structure
 ```
-com 
-    +- example 
-        +- slaughterhouse 
-            +- SlaughterhouseApplication.java 
+📂com 
+    📂 example 
+        📂 slaughterhouse 
+            - SlaughterhouseApplication.java 
             📁 Controllers
             📁 Core
             📁 DTOs
