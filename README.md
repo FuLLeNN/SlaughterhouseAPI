@@ -1,7 +1,6 @@
 ## Slaughterhouse API
 
 <img src="https://user-images.githubusercontent.com/62404655/225074329-30498859-e806-4c4e-b9ce-26c676bb2bac.png" alt="API" /> 
-<img src="https://user-images.githubusercontent.com/62404655/225074920-4b1d4c16-1626-4eac-bd54-a7c3f9a8ed98.png" alt="API" />
                                                                                                                             
 ## Description
 
@@ -24,3 +23,7 @@
             📁 Repositories
             📁 Services
 ```
+
+# JSON Structure
+
+<img src="https://user-images.githubusercontent.com/62404655/225074920-4b1d4c16-1626-4eac-bd54-a7c3f9a8ed98.png" alt="API" />
