@@ -1,21 +1,26 @@
 ## Slaughterhouse API
 
-<p align="left">
-  <img src="https://user-images.githubusercontent.com/62404655/225074329-30498859-e806-4c4e-b9ce-26c676bb2bac.png" alt="API" width="500"/> 
-  <img src="https://user-images.githubusercontent.com/62404655/225074920-4b1d4c16-1626-4eac-bd54-a7c3f9a8ed98.png" alt="API" width="500"/>
-</p>
+<img src="https://user-images.githubusercontent.com/62404655/225074329-30498859-e806-4c4e-b9ce-26c676bb2bac.png" alt="API" /> 
+<img src="https://user-images.githubusercontent.com/62404655/225074920-4b1d4c16-1626-4eac-bd54-a7c3f9a8ed98.png" alt="API" />
                                                                                                                             
 ## Description
 
-- This project is inspired in [Chess.com](https://www.chess.com/)
-- Using React.js and Firebase
-- Libraries: [chessboardjsx.com](https://chessboardjsx.com/) & [chess.js](https://github.com/jhlywa/chess.js)
-- Still in development
+- This API consists of two Models (Animals and Parts of animals) the porpuse of this API is to simulate a slaughterhouse where it registers animals (where they come from, weight, date of register), then the animal proceed to the cut part where we store the parts of the animal that was cut. So with that information it is possible to know which animal that part came from in case of trouble with that part. 
+- This simple API is a Java (Spring Boot) class assignment
+- This API is made in Spring Boot
+- Using [Swagger](https://springdoc.org/) for documentation and testing
+- Using JPA, Hibernate
 
-## Features
-
-- Login/SignUp
-- Offline Chess
-- Friends (soon)
-- Online Chess (soon)
-- Elo System (soon)
+## Folder Structure
+```
+com 
+    +- example 
+        +- slaughterhouse 
+            +- SlaughterhouseApplication.java 
+            :file_folder: Controllers
+            :file_folder: Core
+            :file_folder: DTOs
+            :file_folder: Models
+            :file_folder: Repositories
+            :file_folder: Services
+```
