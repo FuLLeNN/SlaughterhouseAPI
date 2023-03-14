@@ -1,7 +1,9 @@
 ## Slaughterhouse API
-<p align="left>
+
+<p align="left">
   <img src="https://user-images.githubusercontent.com/62404655/225074329-30498859-e806-4c4e-b9ce-26c676bb2bac.png" alt="API" />
 </p>
+                                                                                                                            
 ## Description
 
 - This project is inspired in [Chess.com](https://www.chess.com/)
