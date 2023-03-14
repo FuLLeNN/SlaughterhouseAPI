@@ -17,10 +17,10 @@ com
     +- example 
         +- slaughterhouse 
             +- SlaughterhouseApplication.java 
-            :file_folder: Controllers
-            :file_folder: Core
-            :file_folder: DTOs
-            :file_folder: Models
-            :file_folder: Repositories
-            :file_folder: Services
+            📁 Controllers
+            📁 Core
+            📁 DTOs
+            📁 Models
+            📁 Repositories
+            📁 Services
 
