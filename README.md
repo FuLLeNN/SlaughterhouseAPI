@@ -12,7 +12,7 @@
 - Using JPA, Hibernate
 
 ## Folder Structure
-```
+
 com 
     +- example 
         +- slaughterhouse 
@@ -23,4 +23,4 @@ com
             :file_folder: Models
             :file_folder: Repositories
             :file_folder: Services
-```
+
