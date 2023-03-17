@@ -38,7 +38,7 @@ public class AnimalController {
     }
 
     @Operation(summary = "Create animal", description = "Create an animal")
-    @PostMapping("/create")
+    @PostMapping("/")
     public Animal createAnimal(@RequestBody CreateAnimalDTO animal){
         Animal a = new Animal();
         a.setDate(animal.getDate());
@@ -60,7 +60,7 @@ public class AnimalController {
     }
 
     @Operation(summary = "Update animal by id", description = "Make changes on an animal by the id")
-    @PutMapping("/update/{id}")
+    @PutMapping("/{id}")
     public Animal updateAnimal(@PathVariable("id") Long id, @RequestBody CreateAnimalDTO animal ){
         Animal a = animalService.findAnimalById(id).get();
         a.setDate(animal.getDate());
@@ -70,7 +70,7 @@ public class AnimalController {
     }
 
     @Operation(summary = "Delete animal by id", description = "Delete an animal by its id")
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public void deleteAnimal(@PathVariable("id") Long id){
         animalService.deleteAnimalById(id);
     }

@@ -13,7 +13,7 @@ public class SwaggerConfiguration {
     @Bean
     public OpenAPI baseOpenAPI() {
         return new OpenAPI()
-                .info(new Info().title("Spring Doc").version("1.0.0").description("Spring doc"));
+                .info(new Info().title("Slaughterhouse API").version("1.0.0").description("API to be used at a slaughterhouse"));
     }
 }
 

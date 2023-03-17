@@ -31,7 +31,7 @@ public class PartsController {
     }
 
     @Operation(summary = "Create part", description = "Create part with animal reference")
-    @PostMapping("/create")
+    @PostMapping("/")
     public Animal createPart(@RequestBody CreatePartsDTO parts){
         Parts part = new Parts();
         part.setPartType(parts.getPartType());
@@ -40,7 +40,7 @@ public class PartsController {
     }
 
     @Operation(summary  = "Get an animal by the part id", description = "Returns a Part by id")
-    @GetMapping("/findAnimal/{id}")
+    @GetMapping("/animal/{id}")
     public Animal findAnimalByPartId(@PathVariable("id") Long id){
         return partsService.findAnimalByPartId(id);
     }
