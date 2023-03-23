@@ -6,7 +6,7 @@
 
 - This API consists of two Models (Animals and Parts of animals) the porpuse of this API is to simulate a slaughterhouse where it registers animals (where they come from, weight, date of register), then the animal proceed to the cut part where we store the parts of the animal that was cut. So with that information it is possible to know which animal that part came from in case of trouble with that part. 
 - This simple API is a Java class assignment
-- This API is made in Spring Boot
+- API made in Spring Boot
 - Using [Swagger](https://springdoc.org/) for documentation and testing
 - Using JPA, Hibernate
 
