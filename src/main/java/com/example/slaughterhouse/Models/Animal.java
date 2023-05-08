@@ -30,7 +30,6 @@ public class Animal {
                 Objects.equals(origin, animal.origin);
     }
 
-
     public Animal(LocalDate date, float weight, String origin){
         this.date = date;
         this.weight = weight;

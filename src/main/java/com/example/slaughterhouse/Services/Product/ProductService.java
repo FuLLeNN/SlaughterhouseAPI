@@ -81,7 +81,7 @@ public class ProductService extends ProductServiceGrpc.ProductServiceImplBase {
         Animal animal = animalRepository.findById(id).get();
         List<Parts> parts = animal.getParts();
         List<Product> products = new ArrayList<>();
-        System.out.println("commit");
+
         for (Parts p : parts){
             Product product = productRepository.findById(p.getReference()).get();
             boolean partAlreadyExists = false;
