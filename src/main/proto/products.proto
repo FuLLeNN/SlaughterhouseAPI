@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option java_package = "com.example.protobuf";
+
+service ProductService {
+  rpc getAnimalsInProduct(getAnimalsInProductRequest) returns(getAnimalsInProductResponse);
+  rpc getProductsWithAnimal(getProductsWithAnimalRequest) returns(getProductsWithAnimalResponse);
+}
+
+message getAnimalsInProductRequest {
+  int64 id = 1;
+}
+
+message getAnimalsInProductResponse {
+  repeated Animal animals = 1;
+}
+
+message getProductsWithAnimalRequest{
+  int64 id = 1;
+}
+
+message getProductsWithAnimalResponse{
+  repeated Product products = 1;
+}
+
+message Animal{
+  int64 id = 1;
+  float weight = 2;
+  string origin = 3;
+  repeated Parts parts = 4;
+  int64 day = 5;
+  int64 month = 6;
+  int64 year = 7;
+}
+
+message Parts{
+  int64 id = 1;
+  string partType = 2;
+  int64 reference = 3;
+}
+
+message Product{
+  int64 id = 1;
+  repeated Parts parts = 2;
+}

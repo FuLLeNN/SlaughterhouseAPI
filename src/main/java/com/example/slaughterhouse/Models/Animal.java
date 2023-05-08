@@ -13,7 +13,7 @@ public class Animal {
     private LocalDate date;
     private float weight;
     private String origin;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Parts> parts;
 
     public Animal() {

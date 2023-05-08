@@ -14,5 +14,4 @@ public interface PartsService {
     Parts savePart(Parts part);
     Parts updatePart(Parts part);
     void deletePartById(Long id);
-
 }
