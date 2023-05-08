@@ -23,6 +23,7 @@ public class Product {
         Product product = (Product) o;
         return Objects.equals(id, product.id);
     }
+
     public Product(List<Parts> parts) {
         this.parts = parts;
     }
