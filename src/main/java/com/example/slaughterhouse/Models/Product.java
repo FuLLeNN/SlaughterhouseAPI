@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class Product {
@@ -16,7 +17,12 @@ public class Product {
     public Product() {
 
     }
-
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Product)) return false;
+        Product product = (Product) o;
+        return Objects.equals(id, product.id);
+    }
     public Product(List<Parts> parts) {
         this.parts = parts;
     }

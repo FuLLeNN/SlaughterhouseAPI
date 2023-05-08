@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class Animal {
@@ -18,6 +19,15 @@ public class Animal {
 
     public Animal() {
 
+    }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Animal)) return false;
+        Animal animal = (Animal) o;
+        return Objects.equals(id, animal.id) &&
+                Objects.equals(date, animal.date) &&
+                Objects.equals(weight, animal.weight)&&
+                Objects.equals(origin, animal.origin);
     }
 
     public Animal(LocalDate date, float weight, String origin){

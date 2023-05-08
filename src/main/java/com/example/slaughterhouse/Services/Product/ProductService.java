@@ -34,12 +34,21 @@ public class ProductService extends ProductServiceGrpc.ProductServiceImplBase {
         Product product = productRepository.findById(id).get();
         List<Parts> parts  = product.getParts();
         List<Animal> animals = new ArrayList<>();
-        for (Parts p: parts) {
+
+        for (Parts p : parts) {
             Animal animal = animalRepository.findById(p.getReference()).get();
-            animals.add(animal);
+            boolean animalAlreadyExists = false;
+            for (Animal existingAnimal : animals) {
+                if (existingAnimal.equals(animal)) {
+                    animalAlreadyExists = true;
+                    break;
+                }
+            }
+            if (!animalAlreadyExists) {
+                animals.add(animal);
+            }
         }
-        Set<Animal> set = new HashSet<>(animals.size());
-        animals.removeIf(p->!set.add(p));
+
 
         getAnimalsInProductResponse response = getAnimalsInProductResponse.newBuilder()
                 .addAllAnimals(animals.stream()
@@ -71,9 +80,20 @@ public class ProductService extends ProductServiceGrpc.ProductServiceImplBase {
         Animal animal = animalRepository.findById(id).get();
         List<Parts> parts = animal.getParts();
         List<Product> products = new ArrayList<>();
-        for (Parts p : parts)
-            if(productRepository.findByParts(p)!=null)
-                products.add(productRepository.findByParts(p));
+
+        for (Parts p : parts){
+            Product product = productRepository.findById(p.getReference()).get();
+            boolean partAlreadyExists = false;
+            for (Product existingProduct : products) {
+                if (existingProduct.equals(product)) {
+                    partAlreadyExists = true;
+                    break;
+                }
+            }
+            if (!partAlreadyExists) {
+                products.add(product);
+            }
+        }
 
         getProductsWithAnimalResponse response = getProductsWithAnimalResponse.newBuilder()
                 .addAllProducts(products.stream()
