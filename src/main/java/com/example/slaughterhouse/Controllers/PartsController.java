@@ -3,7 +3,9 @@ package com.example.slaughterhouse.Controllers;
 import com.example.slaughterhouse.DTOs.CreatePartsDTO;
 import com.example.slaughterhouse.Models.Animal;
 import com.example.slaughterhouse.Models.Parts;
+import com.example.slaughterhouse.Services.Animal.AnimalService;
 import com.example.slaughterhouse.Services.Animal.AnimalServiceImpl;
+import com.example.slaughterhouse.Services.Parts.PartsService;
 import com.example.slaughterhouse.Services.Parts.PartsServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -16,10 +18,10 @@ import java.util.Optional;
 @RequestMapping("api/parts")
 public class PartsController {
 
-    private final PartsServiceImpl partsService;
-    private final AnimalServiceImpl animalService;
+    private final PartsService partsService;
+    private final AnimalService animalService;
 
-    public PartsController(PartsServiceImpl partsService, AnimalServiceImpl animalService) {
+    public PartsController(PartsService partsService, AnimalService animalService) {
         this.partsService = partsService;
         this.animalService = animalService;
     }

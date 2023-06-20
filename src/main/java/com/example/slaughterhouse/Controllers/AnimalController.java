@@ -3,6 +3,7 @@ package com.example.slaughterhouse.Controllers;
 import com.example.slaughterhouse.DTOs.CreateAnimalDTO;
 import com.example.slaughterhouse.Models.Animal;
 import com.example.slaughterhouse.Models.Parts;
+import com.example.slaughterhouse.Services.Animal.AnimalService;
 import com.example.slaughterhouse.Services.Animal.AnimalServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -18,10 +19,10 @@ import java.util.Optional;
 @RequestMapping("api/animals")
 public class AnimalController {
 
-    private final AnimalServiceImpl animalService;
+    private final AnimalService animalService;
 
 
-    public AnimalController(AnimalServiceImpl animalService) {
+    public AnimalController(AnimalService animalService) {
         this.animalService = animalService;
     }
 
