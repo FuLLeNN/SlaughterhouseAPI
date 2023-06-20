@@ -8,7 +8,6 @@ import com.example.slaughterhouse.Repositories.AnimalRepository;
 import com.example.slaughterhouse.Repositories.PartsRepository;
 import com.example.slaughterhouse.Repositories.ProductRepository;
 import io.grpc.stub.StreamObserver;
-import jdk.swing.interop.SwingInterOpUtils;
 import org.lognet.springboot.grpc.GRpcService;
 
 import java.util.ArrayList;
